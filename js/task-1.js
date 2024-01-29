@@ -6,14 +6,14 @@ function isEnoughCapacity(products, containerSize) {
   for (let i = 0; i < values.length; i++) {
     totalWer += values[i];
   }
-  if (totalWer >= containerSize) {
+  if (totalWer > containerSize) {
     return false;
   } else {
     return true;
   }
 }
 
-console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
+console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 3 }, 8)); // true
 
 console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
 
